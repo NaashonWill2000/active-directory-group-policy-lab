@@ -88,9 +88,44 @@ Validated the implementation by:
 - Registry-based verification
 - Security policy testing and documentation
 
-## Screenshots
 
-The repository contains screenshots documenting the Active Directory structure, user and group configuration, GPO settings, workstation OU placement, applied policies, registry value, and inactivity-lock test.
+## Screenshots and Validation
+
+### 1. Active Directory Structure
+Shows the organizational units created to organize employees, computers, and security groups.
+
+![Active Directory Structure](01-active-directory-structure.png)
+
+### 2. Domain User and Security Group
+Shows the domain user and IT-Support security group configuration.
+
+![Domain User and Group](02-domain-user-and-group.png)
+
+### 3. Group Policy Configuration
+Shows the configured inactivity-lock security policy set to 600 seconds.
+
+![GPO Inactivity Lock Setting](03-gpo-inactivity-lock-setting.png)
+
+### 4. Workstation Organizational Unit
+Shows the WS01 computer account placed in the Workstations OU so the intended policy can apply.
+
+![Workstation in Workstations OU](04-workstation-in-workstations-ou.png)
+
+### 5. Applied Group Policy
+Shows the workstation's applied Group Policy results, including the custom inactivity-lock GPO.
+
+![Applied Group Policy](05-applied-group-policy.png)
+
+### 6. Registry Verification
+Shows the registry value `InactivityTimeoutSecs` set to `0x258`, equivalent to 600 seconds.
+
+![Inactivity Timeout Registry](06-inactivity-timeout-registry.png)
+
+### 7. Inactivity-Lock Test
+Shows the workstation locking after the configured period of inactivity.
+
+![Inactivity Lock Test](07-inactivity-lock-test.png)
+
 
 ## Lessons Learned
 
